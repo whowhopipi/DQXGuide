@@ -1,0 +1,144 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+    
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/item_menu_navigation_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/main_menu_accessibility_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/navigation_bar" />
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="アイテム"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <!-- 
+        <ImageView
+            android:id="@+id/item_menu_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_menu_moreoverflow_normal_holo_dark" /> -->
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:text="&lt; TOP"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_menu_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/item_menu_navigation_top"
+        android:orientation="horizontal" >
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.37"
+            android:ems="10"
+            android:inputType="textNoSuggestions" >
+        </AutoCompleteTextView>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Clear" />
+    </LinearLayout>
+    
+        
+	<LinearLayout
+	    android:id="@+id/item_tab"
+	    android:layout_width="match_parent"
+	    android:layout_height="30dp"
+	    android:background="#3399cc"
+	    android:layout_below="@+id/item_menu_search" >
+	    
+        <TextView
+            android:id="@+id/item_tab_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:text="すべて" />
+        
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:background="@android:color/darker_gray" />
+	    
+	    <TextView
+	        android:id="@+id/item_tab_material"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="そざい" />
+
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:background="@android:color/darker_gray" />
+
+	    <TextView
+	        android:id="@+id/item_tab_uses"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="つかうもの" />
+	</LinearLayout>
+        
+	<android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/item_menu_navigation_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/item_tab" />
+    <!-- AdBar -->
+
+    <ImageView
+        android:id="@+id/item_menu_navigation_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/main_menu_accessibility_bottom"
+        android:scaleType="fitXY"
+        android:src="@drawable/navigation_bar" />
+
+</RelativeLayout>

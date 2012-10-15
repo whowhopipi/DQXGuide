@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/quest_menu_navigation_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/main_menu_accessibility_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/navigation_bar" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="クエスト"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/quest_menu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:text="&lt; TOP"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+	<LinearLayout
+	    android:id="@+id/quest_tab"
+	    android:layout_width="match_parent"
+	    android:layout_height="30dp"
+	    android:background="#3399cc"
+	    android:layout_below="@+id/quest_menu_navigation_top" >
+	    
+        <TextView
+            android:id="@+id/quest_tab_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:text="0 ~ 50" />
+        
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:background="@android:color/darker_gray" />
+	    
+	    <TextView
+	        android:id="@+id/quest_tab_2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="51 ~ 100" />
+
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:background="@android:color/darker_gray" />
+
+	    <TextView
+	        android:id="@+id/quest_tab_3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="100 ~" />
+	</LinearLayout>
+        
+	<android.support.v4.view.ViewPager
+        android:id="@+id/quest_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/quest_menu_navigation_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/quest_tab" />
+    <!-- AdBar -->
+
+    <ImageView
+        android:id="@+id/quest_menu_navigation_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/main_menu_accessibility_bottom"
+        android:scaleType="fitXY"
+        android:src="@drawable/navigation_bar" />
+
+</RelativeLayout>

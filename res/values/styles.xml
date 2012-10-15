@@ -1,0 +1,12 @@
+<resources>
+    <style name="AppTheme" parent="android:Theme.Light" />
+    
+    <style name="Animation.CustomDialog" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/enter</item>
+        <item name="android:windowExitAnimation">@anim/exit</item>
+    </style>
+
+    <style name="Style_CustomButton" parent="android:Widget.Button">
+        <item name="android:background">@drawable/green_arrow</item>
+    </style>
+</resources>

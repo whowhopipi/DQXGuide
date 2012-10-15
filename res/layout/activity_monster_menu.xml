@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+    
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/monster_menu_navigation_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/main_menu_accessibility_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/navigation_bar" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="モンスター"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:id="@+id/monster_menu_sort"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_menu_moreoverflow_normal_holo_dark" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:text="&lt; TOP"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/inner_monster_menu_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/monster_menu_navigation_top"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/monster_menu_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.37"
+            android:ems="10"
+            android:inputType="textNoSuggestions" >
+        </EditText>
+
+        <Button
+            android:id="@+id/monster_menu_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Clear" />
+    </LinearLayout>
+    
+    <ListView
+        android:id="@+id/monster_menu_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/inner_monster_menu_search"
+        android:layout_above="@+id/item_menu_navigation_bottom"
+        android:fastScrollEnabled="true" >
+    </ListView>
+          
+    <!-- AdBar -->
+    <ImageView
+        android:id="@+id/item_menu_navigation_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/main_menu_accessibility_bottom"
+        android:scaleType="fitXY"
+        android:src="@drawable/navigation_bar" />
+</RelativeLayout>

@@ -1,0 +1,235 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:layout_margin="10dp"
+    android:gravity="fill_horizontal"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/inner_dialog_monster_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription=""
+            android:paddingTop="4dp"
+            android:src="@drawable/monster_sample" />
+
+        <TextView
+            android:id="@+id/dialog_monster_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/inner_dialog_monster_icon"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/inner_dialog_monster_icon"
+            android:text="Monster Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/inner_dialog_monster_hp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dialog_monster_name"
+            android:layout_below="@+id/dialog_monster_name"
+            android:text="HP："
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/dialog_monster_hp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/inner_dialog_monster_hp"
+            android:layout_alignBottom="@+id/inner_dialog_monster_hp"
+            android:layout_toRightOf="@+id/inner_dialog_monster_hp"
+            android:text="0"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/inner_dialog_monster_atk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dialog_monster_hp"
+            android:layout_alignBottom="@+id/dialog_monster_hp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/dialog_monster_hp"
+            android:text="攻："
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/dialog_monster_atk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/inner_dialog_monster_atk"
+            android:layout_alignBottom="@+id/inner_dialog_monster_atk"
+            android:layout_toRightOf="@+id/inner_dialog_monster_atk"
+            android:text="0"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/inner_dialog_monster_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dialog_monster_atk"
+            android:layout_alignBottom="@+id/dialog_monster_atk"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/dialog_monster_atk"
+            android:text="防："
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/dialog_monster_def"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/inner_dialog_monster_def"
+            android:layout_alignBottom="@+id/inner_dialog_monster_def"
+            android:layout_toRightOf="@+id/inner_dialog_monster_def"
+            android:text="0"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/inner_dialog_monster_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/inner_dialog_monster_hp"
+            android:layout_below="@+id/inner_dialog_monster_hp"
+            android:text="Exp："
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/dialog_monster_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/inner_dialog_monster_exp"
+            android:layout_alignBottom="@+id/inner_dialog_monster_exp"
+            android:layout_toRightOf="@+id/inner_dialog_monster_exp"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/inner_dialog_monster_gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/dialog_monster_exp"
+            android:layout_alignBottom="@+id/dialog_monster_exp"
+            android:layout_centerHorizontal="true"
+            android:text="Gold："
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/dialog_monster_gold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/inner_dialog_monster_gold"
+            android:layout_alignBottom="@+id/inner_dialog_monster_gold"
+            android:layout_toRightOf="@+id/inner_dialog_monster_gold"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/inner_dialog_monster_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:overScrollMode="never" >
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="&lt;まめちしき>"
+	            android:textColor="@android:color/white"
+	            android:textStyle="bold" />
+
+	        <TextView
+	            android:id="@+id/dialog_monster_description"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="まめちしき"
+	            android:textColor="@android:color/white" />
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="10dp"
+	            android:text="&lt;ドロップ>"
+	            android:textColor="@android:color/white"
+	            android:textStyle="bold" />
+
+	        <LinearLayout
+	            android:id="@+id/dialog_monster_drop"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="10dp"
+	            android:layout_weight="0.77"
+	            android:orientation="vertical" >
+
+	            <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp">
+	                <TextView
+		            	android:id="@+id/inner_dialog_monster_common"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="通常："
+		                android:textColor="@android:color/white" />
+	                <TextView
+		                android:id="@+id/dialog_monster_common"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text=""
+		                android:textColor="@android:color/white" />
+	            </LinearLayout>
+	            
+	            <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp">
+	                <TextView
+		            	android:id="@+id/inner_dialog_monster_rare"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="レア："
+		                android:textColor="@android:color/white" />
+	                <TextView
+		                android:id="@+id/dialog_monster_rare"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text=""
+		                android:textColor="@android:color/white" />
+	            </LinearLayout>
+	            
+	        </LinearLayout>
+
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="10dp"
+	            android:text="&lt;主な生息地>"
+	            android:textColor="@android:color/white"
+	            android:textStyle="bold" />
+
+	        <LinearLayout
+	            android:id="@+id/dialog_monster_area"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+	    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

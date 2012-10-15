@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+    
+    <!-- TitleBar -->
+
+    <RelativeLayout
+        android:id="@+id/craft_menu_navigation_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/main_menu_accessibility_top"
+            android:scaleType="fitXY"
+            android:src="@drawable/navigation_bar" />
+        
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="職人"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:text="&lt; TOP"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+	<LinearLayout
+	    android:id="@+id/craft_tab"
+	    android:layout_width="match_parent"
+	    android:layout_height="30dp"
+	    android:background="#3399cc"
+	    android:layout_below="@+id/craft_menu_navigation_top" >
+	    
+        <TextView
+            android:id="@+id/craft_tab_buki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:text="武器" />
+        
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:background="@android:color/darker_gray" />
+	    
+	    <TextView
+	        android:id="@+id/craft_tab_mokkou"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="木工" />
+
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:background="@android:color/darker_gray" />
+
+	    <TextView
+	        android:id="@+id/craft_tab_bougu"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="防具" />
+	    
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:background="@android:color/darker_gray" />
+
+	    <TextView
+	        android:id="@+id/craft_tab_saihou"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="裁縫" />
+	    
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:background="@android:color/darker_gray" />
+
+	    <TextView
+	        android:id="@+id/craft_tab_tsubo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="ツボ" />
+	    
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:background="@android:color/darker_gray" />
+
+	    <TextView
+	        android:id="@+id/craft_tab_ranpu"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="ランプ" />
+	    
+	    <ImageView
+	        android:layout_width="1dp"
+	        android:layout_height="20dp"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="8dp"
+	        android:layout_marginRight="8dp"
+	        android:background="@android:color/darker_gray" />
+
+	    <TextView
+	        android:id="@+id/craft_tab_dougu"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:text="道具" />
+	</LinearLayout>
+        
+	<android.support.v4.view.ViewPager
+        android:id="@+id/craft_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/craft_menu_navigation_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/craft_tab" />
+    <!-- AdBar -->
+
+    <ImageView
+        android:id="@+id/craft_menu_navigation_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@string/main_menu_accessibility_bottom"
+        android:scaleType="fitXY"
+        android:src="@drawable/navigation_bar" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.akindroid.dqxguide"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".MainMenuActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="ItemListActivity"></activity>
+        <activity android:name="ItemDialogActivity"
+            android:theme="@style/Theme_CustomDialog" >
+        </activity>
+        <activity android:name="MonsterListActivity"></activity>
+        <activity android:name="MonsterDialogActivity"
+            android:theme="@style/Theme_CustomDialog">
+        </activity>
+        <activity android:name="ArmyListActivity"></activity>
+        <activity android:name="ArmyDialogActivity"
+            android:theme="@style/Theme_CustomDialog">
+        </activity>
+        <activity android:name="CraftActivity"></activity>
+        <activity android:name="WorkActivity"></activity>
+        <activity android:name="QuestActivity"></activity>
+        <activity android:name="ReportActivity"></activity>
+        <activity android:name="UpdateActivity"></activity>
+    </application>
+
+</manifest>

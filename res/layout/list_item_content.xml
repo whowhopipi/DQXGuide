@@ -1,0 +1,71 @@
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/list_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:contentDescription="@string/list_main_menu_accessibility"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/list_item_image"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true" >
+        
+	    <TextView
+	        android:id="@+id/list_item_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:text="パープルアイ"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="@android:color/black" />
+	    
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content" >
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:text="店買い: "
+	        	android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:textColor="@android:color/darker_gray" />
+	        
+	        <TextView
+	            android:id="@+id/list_item_buy_price"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:text="0G"
+	        	android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:textColor="@android:color/darker_gray" />
+	        
+	        <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:layout_marginLeft="10dp"
+		        android:text="店売り: "
+	        	android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:textColor="@android:color/darker_gray" />
+	        
+	        <TextView
+	            android:id="@+id/list_item_sell_price"
+		        android:layout_width="wrap_content"
+		        android:layout_height="match_parent"
+		        android:text="0G"
+	        	android:textAppearance="?android:attr/textAppearanceSmall"
+		        android:textColor="@android:color/darker_gray" />
+	    </LinearLayout>
+    </LinearLayout>
+
+    
+</RelativeLayout>

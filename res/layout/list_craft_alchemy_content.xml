@@ -1,0 +1,52 @@
+<RelativeLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/list_craft_alchemy_image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="3dp"
+        android:contentDescription="@string/list_main_menu_accessibility"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/list_craft_alchemy_image"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/list_craft_alchemy_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="パープルアイ"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="職Lv: "
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/list_craft_alchemy_craft_lv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/darker_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

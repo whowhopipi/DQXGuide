@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:gravity="fill_horizontal" >
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+	        android:id="@+id/inner_dialog_army_icon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:paddingTop="4dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:src="@drawable/item_sample"
+	        android:contentDescription="" />
+        
+        <TextView
+	        android:id="@+id/dialog_army_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/inner_dialog_army_icon"
+	        android:layout_marginLeft="10dp"
+	        android:layout_toRightOf="@+id/inner_dialog_army_icon"
+	        android:text="Army Name"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:textColor="@android:color/white" />
+        
+        <TextView
+            android:id="@+id/inner_dialog_army_buy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/dialog_army_name"
+	        android:layout_below="@+id/dialog_army_name"
+	        android:text="買："
+	        android:textColor="@android:color/white" />
+	
+	    <TextView
+	        android:id="@+id/dialog_army_buy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/inner_dialog_army_buy"
+	        android:layout_alignBottom="@+id/inner_dialog_army_buy"
+	        android:layout_toRightOf="@+id/inner_dialog_army_buy"
+	        android:text="0G"
+	        android:textColor="@android:color/white" />
+	
+	    <TextView
+	        android:id="@+id/inner_dialog_army_sell"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/dialog_army_buy"
+	        android:layout_alignBottom="@+id/dialog_army_buy"
+	        android:layout_marginLeft="10dp"
+	        android:layout_toRightOf="@+id/dialog_army_buy"
+	        android:text="売："
+	        android:textColor="@android:color/white" />
+	
+	    <TextView
+	        android:id="@+id/dialog_army_sell"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/inner_dialog_army_sell"
+	        android:layout_alignBottom="@+id/inner_dialog_army_sell"
+	        android:layout_toRightOf="@+id/inner_dialog_army_sell"
+	        android:text="0G"
+	        android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/inner_dialog_army_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:overScrollMode="never" >
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >      
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="&lt;説明>"
+		        android:textColor="@android:color/white"
+		        android:textStyle="bold" />
+	
+		    <TextView
+		        android:id="@+id/dialog_army_description"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Army Description"
+		        android:textColor="@android:color/white" />
+		    
+   		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:text="&lt;ステータス>"
+		        android:textColor="@android:color/white"
+		        android:textStyle="bold" />
+	
+		    <TextView
+		        android:id="@+id/dialog_army_status"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="army Status"
+		        android:textColor="@android:color/white" />
+		    		    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:text="&lt;レシピ>"
+		        android:textColor="@android:color/white"
+		        android:textStyle="bold" />
+		    
+		    <LinearLayout 
+		        android:id="@+id/dialog_army_recipe"
+		        android:layout_height="wrap_content"
+		        android:layout_width="match_parent"
+	            android:layout_marginLeft="10dp"
+		        android:orientation="vertical" />
+		    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:text="&lt;ドロップ>"
+		        android:textColor="@android:color/white"
+		        android:textStyle="bold" />
+		    
+		    <LinearLayout 
+		        android:id="@+id/dialog_army_drop"
+		        android:layout_height="wrap_content"
+		        android:layout_width="match_parent"
+	            android:layout_marginLeft="10dp"
+		        android:orientation="vertical" />
+		    
+		    <TextView
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="10dp"
+		        android:text="&lt;販売>"
+		        android:textColor="@android:color/white"
+		        android:textStyle="bold" />
+		    
+		    <LinearLayout 
+		        android:id="@+id/dialog_army_sale"
+		        android:layout_height="wrap_content"
+		        android:layout_width="match_parent"
+	            android:layout_marginLeft="10dp"
+		        android:orientation="vertical" />
+
+	    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
